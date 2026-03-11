@@ -1,7 +1,34 @@
 [
   {
     "id": "p1",
-    "title": "Example Project",
-    "summary": "This is an example project. It demonstrates the project card and content model."
+    "title": "LTB Buddy",
+    "description": "AI-assisted legal filing workflow for Ontario tenants",
+    "tag": "Live Product",
+    "imageUrl": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsZWdhbCUyMGRvY3VtZW50JTIwZmlsaW5nJTIwd29ya3NwYWNlfGVufDF8fHx8MTc3MzI1NTUzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "link": "https://example.com/ltb-buddy"
+  },
+  {
+    "id": "p2",
+    "title": "EasyBuddy",
+    "description": "AI onboarding assistant for frontline workforce training",
+    "tag": "Prototype",
+    "imageUrl": "https://images.unsplash.com/photo-1764533831301-0a1a6cc8b455?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvbmJvYXJkaW5nJTIwdHJhaW5pbmclMjBkaWdpdGFsJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3MzI1NTUzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "link": "https://example.com/easybuddy"
+  },
+  {
+    "id": "p3",
+    "title": "BlueBot",
+    "description": "Retail training assistant prototype for employee enablement",
+    "tag": "Prototype",
+    "imageUrl": "https://images.unsplash.com/photo-1747104930372-63ae70258342?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXRhaWwlMjBlbXBsb3llZSUyMHRyYWluaW5nJTIwc3RvcmV8ZW58MXx8fHwxNzczMjU1NTMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "link": "https://example.com/bluebot"
+  },
+  {
+    "id": "p4",
+    "title": "Feedback System",
+    "description": "User feedback and trust signal experiment",
+    "tag": "Case Study",
+    "imageUrl": "https://images.unsplash.com/photo-1575388902449-6bca946ad549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZWVkYmFjayUyMHVzZXIlMjBpbnRlcmZhY2UlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzczMjU1NTMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "link": "https://example.com/feedback-system"
   }
 ]

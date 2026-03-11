@@ -2,16 +2,43 @@
   {
     "id": "d1",
     "title": "Function Before Form",
-    "description": "Beautiful design must serve a purpose. The best interfaces fade into the background."
+    "quote": "Design is not just what it looks like and feels like. Design is how it works.",
+    "author": "Steve Jobs",
+    "interpretation": "Beautiful design must serve a purpose. The best interfaces fade into the background, letting users accomplish their goals without friction."
   },
   {
     "id": "d2",
     "title": "Observe Behavior",
-    "description": "Real insights come from watching how people actually use systems, not assumptions."
+    "quote": "To design an easy-to-use interface, pay attention to what users do, not what they say.",
+    "author": "Jakob Nielsen",
+    "interpretation": "Real insights come from watching how people actually use systems, not from assumptions or self-reported preferences."
   },
   {
     "id": "d3",
     "title": "Design for Change",
-    "description": "Systems must be flexible and adaptable. Design for evolution."
+    "quote": "The only constant is change.",
+    "author": "Heraclitus",
+    "interpretation": "Systems must be flexible and adaptable. Design for evolution, not perfection, and build structures that can grow with emerging needs."
+  },
+  {
+    "id": "d4",
+    "title": "Design for Real Behavior",
+    "quote": "We must design for the way people behave, not for how we wish they would behave.",
+    "author": "Don Norman",
+    "interpretation": "Effective design meets people where they are, accommodating human nature rather than fighting against it."
+  },
+  {
+    "id": "d5",
+    "title": "Experience Matters",
+    "quote": "People will forget what you did, but people will never forget how you made them feel.",
+    "author": "Maya Angelou",
+    "interpretation": "Beyond functionality, great design creates positive emotional experiences that build trust and lasting relationships."
+  },
+  {
+    "id": "d6",
+    "title": "Intellectual Honesty",
+    "quote": "The first principle is that you must not fool yourself and you are the easiest person to fool.",
+    "author": "Richard Feynman",
+    "interpretation": "Question assumptions, validate decisions with evidence, and remain humble about what you do not know. Good design requires truth."
   }
 ]
