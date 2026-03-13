@@ -4,27 +4,47 @@
     "title": "LTB Buddy",
     "description": "AI-assisted legal filing workflow for Ontario tenants",
     "tag": "Live Product",
-    "imageUrl": "https://images.unsplash.com/photo-1583521214690-73421a1829a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsZWdhbCUyMGRvY3VtZW50JTIwZmlsaW5nJTIwd29ya3NwYWNlfGVufDF8fHx8MTc3MzI1NTUzMXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "imageUrl": "/projects/ltbbuddy-wix.png",
+    "link": "https://ltbbuddy.teambotics.app/"
   },
   {
     "id": "p2",
     "title": "EasyBuddy",
     "description": "AI onboarding assistant for frontline workforce training",
     "tag": "Prototype",
-    "imageUrl": "https://images.unsplash.com/photo-1764533831301-0a1a6cc8b455?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvbmJvYXJkaW5nJTIwdHJhaW5pbmclMjBkaWdpdGFsJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3MzI1NTUzMXww&ixlib=rb-4.1.0&q=80&w=1080"
+    "imageUrl": "/projects/easybuddy.png",
+    "link": "https://easybuddy.teambotics.app/"
   },
   {
     "id": "p3",
     "title": "BlueBot",
-    "description": "Retail training assistant prototype for employee enablement",
+    "description": "Innovative retail training support for frontline teams.",
     "tag": "Prototype",
-    "imageUrl": "https://images.unsplash.com/photo-1747104930372-63ae70258342?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXRhaWwlMjBlbXBsb3llZSUyMHRyYWluaW5nJTIwc3RvcmV8ZW58MXx8fHwxNzczMjU1NTMyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "imageUrl": "/projects/bluebot.png",
+    "link": "https://nikhilkhedkar.wixsite.com/bluebot"
   },
   {
     "id": "p4",
-    "title": "Feedback System",
-    "description": "User feedback and trust signal experiment",
+    "title": "FeedbackFish",
+    "description": "UX intervention redesigning Best Buy Canada's customer feedback system.",
     "tag": "Case Study",
-    "imageUrl": "https://images.unsplash.com/photo-1575388902449-6bca946ad549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZWVkYmFjayUyMHVzZXIlMjBpbnRlcmZhY2UlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzczMjU1NTMyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    "imageUrl": "/projects/feedbackfish.jpg",
+    "link": "https://feedbackfish.teambotics.app"
+  },
+  {
+    "id": "p5",
+    "title": "SynFo",
+    "description": "Research-driven systems design exploring how to counter misinformation.",
+    "tag": "Research",
+    "imageUrl": "/projects/synfo.jpg",
+    "link": "https://synfo.teambotics.app"
+  },
+  {
+    "id": "p6",
+    "title": "Smart Akwesasne",
+    "description": "Award-winning design charette concept for a smarter community future.",
+    "tag": "Award Winner",
+    "imageUrl": "/projects/smart-akwesasne.svg",
+    "link": "https://nikhilkhedkar.wixsite.com/design/smart-akwesasne"
   }
 ]

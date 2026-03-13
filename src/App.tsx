@@ -42,8 +42,12 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-semibold">NK</span>
+              <div className="w-12 h-12 flex items-center justify-center transition-colors">
+                <img
+                  src="/portfolio-website-logo.gif"
+                  alt="Nikhil Khedkar logo"
+                  className="h-10 w-10 object-contain"
+                />
               </div>
             </div>
 

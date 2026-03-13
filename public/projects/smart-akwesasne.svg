@@ -1,0 +1,48 @@
+<svg viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Smart Akwesasne project card</title>
+  <desc id="desc">Soft blue green gradient background with the words Smart Akwesasne.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D8E6DD"/>
+      <stop offset="52%" stop-color="#C6D9D0"/>
+      <stop offset="100%" stop-color="#B8D0E6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <circle cx="240" cy="220" r="210" fill="#EEF4EF" opacity="0.65"/>
+  <circle cx="990" cy="290" r="180" fill="#DCE9F2" opacity="0.7"/>
+  <circle cx="930" cy="930" r="250" fill="#D2E2DA" opacity="0.55"/>
+  <path d="M120 790C290 700 430 700 580 760S900 850 1080 770" fill="none" stroke="#8FAEB8" stroke-width="18" stroke-linecap="round" opacity="0.45"/>
+  <path d="M120 870C290 780 430 780 580 840S900 930 1080 850" fill="none" stroke="#7DA1AB" stroke-width="12" stroke-linecap="round" opacity="0.35"/>
+  <text
+    x="120"
+    y="520"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="120"
+    letter-spacing="3"
+    fill="#294B57"
+  >
+    Smart
+  </text>
+  <text
+    x="120"
+    y="650"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="132"
+    font-weight="700"
+    letter-spacing="2"
+    fill="#193947"
+  >
+    Akwesasne
+  </text>
+  <text
+    x="124"
+    y="742"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="36"
+    letter-spacing="8"
+    fill="#436370"
+  >
+    systems design concept
+  </text>
+</svg>
