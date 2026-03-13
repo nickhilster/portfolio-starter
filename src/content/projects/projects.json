@@ -17,22 +17,30 @@
   },
   {
     "id": "p3",
-    "title": "BlueBot",
-    "description": "Innovative retail training support for frontline teams.",
-    "tag": "Prototype",
-    "imageUrl": "/projects/bluebot.png",
-    "link": "https://nikhilkhedkar.wixsite.com/bluebot"
+    "title": "AgentSync",
+    "description": "AI agent coordination concept for synchronizing assistants, workflows, and shared problem-solving.",
+    "tag": "Live Product",
+    "imageUrl": "/projects/agentsync.webp",
+    "link": "https://agentsync.teambotics.app"
   },
   {
     "id": "p4",
-    "title": "FeedbackFish",
-    "description": "UX intervention redesigning Best Buy Canada's customer feedback system.",
-    "tag": "Case Study",
-    "imageUrl": "/projects/feedbackfish.jpg",
-    "link": "https://feedbackfish.teambotics.app"
+    "title": "BlueBot",
+    "description": "Innovative retail training support for frontline teams.",
+    "tag": "Prototype",
+    "imageUrl": "/projects/bluebot.webp",
+    "link": "https://nikhilkhedkar.wixsite.com/bluebot"
   },
   {
     "id": "p5",
+    "title": "FeedbackFish",
+    "description": "UX intervention redesigning Best Buy Canada's customer feedback system.",
+    "tag": "Case Study",
+    "imageUrl": "/projects/feedbackfish.webp",
+    "link": "https://feedbackfish.teambotics.app"
+  },
+  {
+    "id": "p6",
     "title": "SynFo",
     "description": "Research-driven systems design exploring how to counter misinformation.",
     "tag": "Research",
@@ -40,11 +48,27 @@
     "link": "https://synfo.teambotics.app"
   },
   {
-    "id": "p6",
+    "id": "p7",
     "title": "Smart Akwesasne",
     "description": "Award-winning design charette concept for a smarter community future.",
     "tag": "Award Winner",
     "imageUrl": "/projects/smart-akwesasne.svg",
     "link": "https://nikhilkhedkar.wixsite.com/design/smart-akwesasne"
+  },
+  {
+    "id": "p8",
+    "title": "McDonald's",
+    "description": "Motion-forward brand visuals and design work created for McDonald's.",
+    "tag": "Brand Work",
+    "imageUrl": "/projects/mcdonalds.jpg",
+    "link": "https://nikhilkhedkar.wixsite.com/design/mcdonalds"
+  },
+  {
+    "id": "p9",
+    "title": "Motion Graphics Demoreel",
+    "description": "A fast-cut reel of motion graphics, title work, and visual storytelling projects.",
+    "tag": "Showreel",
+    "imageUrl": "/projects/motiongraphics-demoreel.svg",
+    "link": "https://youtu.be/FPgL_biD40w?si=wrlRJTH9QWWvebhh"
   }
 ]

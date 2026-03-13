@@ -1,0 +1,43 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Visual Explorations placeholder card</title>
+  <desc id="desc">Abstract luminous gradients and orbital lines introducing a gallery of visual explorations.</desc>
+  <rect width="1200" height="1200" fill="#0B1324"/>
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <circle cx="302" cy="276" r="250" fill="url(#peach)" fill-opacity="0.92"/>
+  <circle cx="900" cy="260" r="220" fill="url(#violet)" fill-opacity="0.78"/>
+  <circle cx="690" cy="824" r="300" fill="url(#cyan)" fill-opacity="0.48"/>
+  <circle cx="600" cy="600" r="372" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  <circle cx="600" cy="600" r="284" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <path d="M170 788C282 648 415 592 566 614C712 636 786 772 958 738" stroke="rgba(255,255,255,0.16)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M198 850C366 728 542 700 724 760C846 800 918 894 1004 930" stroke="rgba(255,255,255,0.12)" stroke-width="3" stroke-linecap="round"/>
+  <g filter="url(#soft)">
+    <rect x="94" y="858" width="1012" height="212" rx="34" fill="rgba(10,18,32,0.58)"/>
+  </g>
+  <text x="120" y="922" fill="#F6F0E5" font-family="'Segoe UI', Arial, sans-serif" font-size="34" letter-spacing="7">INTERACTIVE AV</text>
+  <text x="120" y="1002" fill="#FFFFFF" font-family="'Segoe UI', Arial, sans-serif" font-size="96" font-weight="700">Visual Explorations</text>
+  <text x="120" y="1060" fill="#CBD5E1" font-family="'Segoe UI', Arial, sans-serif" font-size="34">Browser-native experiments in motion, sound, and generative form</text>
+  <defs>
+    <linearGradient id="bg" x1="84" y1="48" x2="1046" y2="1114" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#28163B"/>
+      <stop offset="0.48" stop-color="#16243C"/>
+      <stop offset="1" stop-color="#09111E"/>
+    </linearGradient>
+    <radialGradient id="peach" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(302 276) rotate(90) scale(250)">
+      <stop stop-color="#F6C180"/>
+      <stop offset="1" stop-color="#F6C180" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="violet" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(900 260) rotate(90) scale(220)">
+      <stop stop-color="#B280FF"/>
+      <stop offset="1" stop-color="#B280FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cyan" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(690 824) rotate(90) scale(300)">
+      <stop stop-color="#66D6EA"/>
+      <stop offset="1" stop-color="#66D6EA" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="54" y="818" width="1092" height="292" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="20" result="effect1_foregroundBlur_1_2"/>
+    </filter>
+  </defs>
+</svg>

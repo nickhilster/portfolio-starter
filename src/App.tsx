@@ -2,10 +2,26 @@ import React, { useEffect, useState } from 'react'
 import { Analytics } from '@vercel/analytics/react'
 import { ArrowUp, Disc3, Headphones, Linkedin, Menu, Moon, Sun, X } from 'lucide-react'
 import CursorRippleTrail from './components/CursorRippleTrail'
+import ExplorationCard from './components/ExplorationCard'
 import PrincipleCard from './components/PrincipleCard'
 import ProjectCard from './components/ProjectCard'
+import { explorations } from './content/explorations/explorations'
 import principles from './content/principles/principles.json'
 import projects from './content/projects/projects.json'
+
+type ProjectEntry = {
+  id: string
+  title: string
+  description: string
+  tag: string
+  imageUrl: string
+  link?: string
+}
+
+const getCurrentPath = () => {
+  const path = window.location.pathname.replace(/\/+$/, '')
+  return path === '' ? '/' : path
+}
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -19,6 +35,9 @@ export default function App() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches
   })
 
+  const currentPath = getCurrentPath()
+  const isExplorationsPage = currentPath === '/explorations'
+
   useEffect(() => {
     const root = document.documentElement
     if (dark) {
@@ -29,6 +48,12 @@ export default function App() {
       localStorage.setItem('theme', 'light')
     }
   }, [dark])
+
+  useEffect(() => {
+    document.title = isExplorationsPage
+      ? 'Nikhil Khedkar | Visual Explorations'
+      : 'Nikhil Khedkar | AI Enablement & Systems Designer'
+  }, [isExplorationsPage])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,15 +68,12 @@ export default function App() {
     }
   }, [])
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id)
-    element?.scrollIntoView({ behavior: 'smooth' })
-    setMobileMenuOpen(false)
-  }
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
+  const homeHref = isExplorationsPage ? '/' : '#top'
+  const homeSectionHref = (id: string) => (isExplorationsPage ? `/#${id}` : `#${id}`)
 
   const navLink =
     'text-stone-700 dark:text-gray-300 hover:text-stone-950 dark:hover:text-slate-100 transition-colors'
@@ -65,28 +87,56 @@ export default function App() {
   const connectCard =
     'interactive-card group flex items-center gap-4 rounded-2xl border-2 border-[var(--surface-border)] bg-[var(--surface-bg)] p-5 transition-all duration-300 hover:border-[var(--surface-border-hover)] hover:scale-[1.02] dark:border-gray-600 dark:bg-gray-700 dark:hover:border-slate-300'
 
+  const projectEntries = projects as ProjectEntry[]
+  const projectsForHome: ProjectEntry[] = [
+    ...projectEntries,
+    {
+      id: 'p-explorations',
+      title: 'Visual Explorations',
+      description:
+        'A dedicated gallery of browser-based audiovisual experiments, generative worlds, and interactive studies.',
+      tag: 'Interactive AV',
+      imageUrl: '/projects/visual-explorations.svg',
+      link: '/explorations',
+    },
+  ]
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false)
+  }
+
   return (
-    <div className="min-h-screen bg-[var(--page-bg)] dark:bg-gray-900 transition-colors duration-300">
+    <div id="top" className="min-h-screen bg-[var(--page-bg)] dark:bg-gray-900 transition-colors duration-300">
       <CursorRippleTrail />
+
       <nav className="fixed top-0 left-0 right-0 bg-[#f7f0e4]/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-[var(--surface-border)] dark:border-gray-700 z-50 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-2">
-              <div className="w-12 h-12 flex items-center justify-center transition-colors">
+            <a href="/" className="flex items-center space-x-2">
+              <div className="brand-mark-shell w-12 h-12 flex items-center justify-center transition-colors">
                 <img
-                  src="/portfolio-website-logo.gif"
+                  src="/portfolio-website-logo.svg"
                   alt="Nikhil Khedkar logo"
-                  className="h-10 w-10 object-contain"
+                  className="brand-mark h-10 w-10 object-contain"
                 />
               </div>
-            </div>
+            </a>
 
             <div className="hidden md:flex items-center space-x-8">
-              <button onClick={() => scrollToSection('projects')} className={navLink}>Projects</button>
-              <button onClick={() => scrollToSection('principles')} className={navLink}>Principles</button>
-              <button onClick={() => scrollToSection('about')} className={navLink}>About</button>
-              <button onClick={() => scrollToSection('connect')} className={navLink}>Connect</button>
-              <button onClick={() => scrollToSection('connect')} className={navLink}>Resume</button>
+              <a href={homeHref} className={navLink}>Home</a>
+              <a href={homeSectionHref('principles')} className={navLink}>Principles</a>
+              <a href={homeSectionHref('projects')} className={navLink}>Projects</a>
+              <a href="/explorations" className={navLink}>Explorations</a>
+              <a
+                href="https://teambotics.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={navLink}
+              >
+                Teambotics
+              </a>
+              <a href={homeSectionHref('connect')} className={navLink}>Connect</a>
+              <a href={homeSectionHref('about')} className={navLink}>About</a>
             </div>
 
             <div className="flex items-center space-x-2">
@@ -113,167 +163,210 @@ export default function App() {
 
           {mobileMenuOpen && (
             <div className="md:hidden py-4 space-y-4 border-t border-gray-100 dark:border-gray-700">
-              <button onClick={() => scrollToSection('projects')} className={`block w-full text-left ${navLink}`}>Projects</button>
-              <button onClick={() => scrollToSection('principles')} className={`block w-full text-left ${navLink}`}>Principles</button>
-              <button onClick={() => scrollToSection('about')} className={`block w-full text-left ${navLink}`}>About</button>
-              <button onClick={() => scrollToSection('connect')} className={`block w-full text-left ${navLink}`}>Connect</button>
-              <button onClick={() => scrollToSection('connect')} className={`block w-full text-left ${navLink}`}>Resume</button>
+              <a href={homeHref} className={`block w-full text-left ${navLink}`} onClick={closeMobileMenu}>Home</a>
+              <a href={homeSectionHref('principles')} className={`block w-full text-left ${navLink}`} onClick={closeMobileMenu}>Principles</a>
+              <a href={homeSectionHref('projects')} className={`block w-full text-left ${navLink}`} onClick={closeMobileMenu}>Projects</a>
+              <a href="/explorations" className={`block w-full text-left ${navLink}`} onClick={closeMobileMenu}>Explorations</a>
+              <a
+                href="https://teambotics.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block w-full text-left ${navLink}`}
+                onClick={closeMobileMenu}
+              >
+                Teambotics
+              </a>
+              <a href={homeSectionHref('connect')} className={`block w-full text-left ${navLink}`} onClick={closeMobileMenu}>Connect</a>
+              <a href={homeSectionHref('about')} className={`block w-full text-left ${navLink}`} onClick={closeMobileMenu}>About</a>
             </div>
           )}
         </div>
       </nav>
 
-      <section className="pt-32 pb-24 px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="mb-4 text-stone-900 dark:text-white text-5xl font-semibold">Nikhil Khedkar</h1>
-          <h2 className="mb-6 text-stone-700 dark:text-gray-300 text-3xl font-medium">AI Enablement &amp; Systems Designer</h2>
-          <p className="text-xl text-stone-700 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-            Designing systems where artificial intelligence, human behavior, and organizations meet.
-          </p>
-          <p className="text-stone-500 dark:text-gray-500">Product Design | UX Research | AI Adoption | Systems Thinking</p>
-        </div>
-      </section>
-
-      <section id="principles" className="py-24 px-6 lg:px-8 bg-[#f7f0e4] dark:bg-gray-800 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-12 max-w-3xl">
-            <h2 className="mb-4 text-stone-900 dark:text-white text-4xl font-semibold">Design Principles</h2>
-            <p className="text-stone-700 dark:text-gray-400 text-lg">
-              These principles shape how I approach systems design and human behavior, grounding my work in timeless wisdom and practical insight.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {principles.map((principle) => (
-              <PrincipleCard
-                key={principle.id}
-                title={principle.title}
-                quote={principle.quote}
-                author={principle.author}
-                interpretation={principle.interpretation}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" className="py-24 px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-stone-900 dark:text-white text-4xl font-semibold">Selected Work</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                tag={project.tag}
-                imageUrl={project.imageUrl}
-                link={project.link}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="py-24 px-6 lg:px-8 bg-[#f7f0e4] dark:bg-gray-800 transition-colors duration-300">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="mb-8 text-stone-900 dark:text-white text-4xl font-semibold">About</h2>
-          <div className="space-y-6">
-            <p className="text-lg text-stone-800 dark:text-gray-300 leading-relaxed">
-              I work at the intersection of AI enablement, UX research, and organizational systems design,
-              helping teams build intelligent systems that genuinely serve people and adapt to real-world complexity.
-            </p>
-            <div className="space-y-3 text-stone-800 dark:text-gray-300">
-              <p className="flex items-start"><span className="text-stone-500 mr-3 mt-1">-</span><span>Enterprise AI governance and adoption strategy for large-scale organizations</span></p>
-              <p className="flex items-start"><span className="text-stone-500 mr-3 mt-1">-</span><span>Frontline workforce enablement systems that bridge technology and human needs</span></p>
-              <p className="flex items-start"><span className="text-stone-500 mr-3 mt-1">-</span><span>Media research into misinformation ecosystems and information architecture</span></p>
-              <p className="flex items-start"><span className="text-stone-500 mr-3 mt-1">-</span><span>Production coordination on large-scale projects including Marvel and Disney</span></p>
+      {isExplorationsPage ? (
+        <>
+          <section className="pt-32 pb-16 px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto">
+              <p className="mb-3 text-sm uppercase tracking-[0.16em] text-stone-500 dark:text-gray-400">Visual Explorations</p>
+              <h1 className="mb-6 text-stone-900 dark:text-white text-5xl font-semibold">Interactive audiovisual studies and browser-native experiments.</h1>
+              <p className="max-w-3xl text-lg text-stone-700 dark:text-gray-300 leading-relaxed">
+                This page collects the more immersive side of my practice: generative systems, audio-reactive environments, camera-driven visuals, and interactive sketches published as lightweight live links.
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <section id="connect" className="py-24 px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="mb-8 text-stone-900 dark:text-white text-4xl font-semibold">Connect</h2>
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
-            <a
-              href="https://linkedin.com/in/nikhilkhedkar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={connectCard}
-              aria-label="LinkedIn profile"
-            >
-              <div className={`${connectIconBox} shrink-0`}>
-                <Linkedin className="w-5 h-5 text-stone-700 dark:text-slate-200" />
+          <section className="pb-24 px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+                {explorations.map((exploration) => (
+                  <ExplorationCard key={exploration.id} exploration={exploration} />
+                ))}
               </div>
-              <div>
-                <p className="text-sm text-stone-500 dark:text-gray-400">LinkedIn</p>
-                <p className={connectLink}>Nikhil Khedkar</p>
+              <div className="mt-6 interactive-card rounded-3xl border-2 border-[var(--surface-border)] bg-[var(--surface-bg)] p-8 dark:border-gray-600 dark:bg-gray-700">
+                <p className="mb-3 text-sm uppercase tracking-[0.16em] text-stone-500 dark:text-gray-400">Why Here</p>
+                <p className="max-w-4xl text-stone-800 dark:text-gray-300 leading-relaxed">
+                  Keeping these live links on their own page lets the homepage stay focused and fast, while still giving the experimental work enough space to feel intentional rather than tucked away.
+                </p>
               </div>
-            </a>
+            </div>
+          </section>
+        </>
+      ) : (
+        <>
+          <section className="pt-32 pb-24 px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="mb-4 text-stone-900 dark:text-white text-5xl font-semibold">Nikhil Khedkar</h1>
+              <h2 className="mb-6 text-stone-700 dark:text-gray-300 text-3xl font-medium">AI Enablement &amp; Systems Designer</h2>
+              <p className="text-xl text-stone-700 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
+                Designing systems where artificial intelligence, human behavior, and organizations meet.
+              </p>
+              <p className="text-stone-500 dark:text-gray-500">Product Design | UX Research | AI Adoption | Systems Thinking</p>
+            </div>
+          </section>
 
-            <a
-              href="https://teambotics.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={connectCard}
-              aria-label="Teambotics website"
-            >
-              <div className={`${connectIconBox} shrink-0`}>
-                <img
-                  src="/brands/teambotics-logo.png"
-                  alt="Teambotics logo"
-                  className="h-8 w-8 object-contain"
-                />
+          <section id="principles" className="py-24 px-6 lg:px-8 bg-[#f7f0e4] dark:bg-gray-800 transition-colors duration-300">
+            <div className="max-w-7xl mx-auto">
+              <div className="mb-12 max-w-3xl">
+                <h2 className="mb-4 text-stone-900 dark:text-white text-4xl font-semibold">Design Principles</h2>
+                <p className="text-stone-700 dark:text-gray-400 text-lg">
+                  These principles shape how I approach systems design and human behavior, grounding my work in timeless wisdom and practical insight.
+                </p>
               </div>
-              <div>
-                <p className="text-sm text-stone-500 dark:text-gray-400">Founder</p>
-                <p className={connectLink}>Teambotics Inc</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {principles.map((principle) => (
+                  <PrincipleCard
+                    key={principle.id}
+                    title={principle.title}
+                    quote={principle.quote}
+                    author={principle.author}
+                    interpretation={principle.interpretation}
+                  />
+                ))}
               </div>
-            </a>
+            </div>
+          </section>
 
-            <a
-              href="https://soundcloud.com/sublumerecords"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={connectCard}
-              aria-label="Sublume Records on SoundCloud"
-            >
-              <div className={`${connectIconBox} shrink-0`}>
-                <Disc3 className="w-5 h-5 text-stone-700 dark:text-slate-200" />
+          <section id="projects" className="py-24 px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="mb-12">
+                <h2 className="text-stone-900 dark:text-white text-4xl font-semibold">Selected Work</h2>
               </div>
-              <div>
-                <p className="text-sm text-stone-500 dark:text-gray-400">Record Label</p>
-                <p className={connectLink}>Sublume Records</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {projectsForHome.map((project) => (
+                  <ProjectCard
+                    key={project.id}
+                    title={project.title}
+                    description={project.description}
+                    tag={project.tag}
+                    imageUrl={project.imageUrl}
+                    link={project.link}
+                  />
+                ))}
               </div>
-            </a>
+            </div>
+          </section>
 
-            <a
-              href="https://www.mixcloud.com/nickhil/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={connectCard}
-              aria-label="DJ sets on Mixcloud"
-            >
-              <div className={`${connectIconBox} shrink-0`}>
-                <Headphones className="w-5 h-5 text-stone-700 dark:text-slate-200" />
+          <section id="about" className="py-24 px-6 lg:px-8 bg-[#f7f0e4] dark:bg-gray-800 transition-colors duration-300">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="mb-8 text-stone-900 dark:text-white text-4xl font-semibold">About</h2>
+              <div className="space-y-6">
+                <p className="text-lg text-stone-800 dark:text-gray-300 leading-relaxed">
+                  I work at the intersection of AI enablement, UX research, and organizational systems design,
+                  helping teams build intelligent systems that genuinely serve people and adapt to real-world complexity.
+                </p>
+                <div className="space-y-3 text-stone-800 dark:text-gray-300">
+                  <p className="flex items-start"><span className="text-stone-500 mr-3 mt-1">-</span><span>Enterprise AI governance and adoption strategy for large-scale organizations</span></p>
+                  <p className="flex items-start"><span className="text-stone-500 mr-3 mt-1">-</span><span>Frontline workforce enablement systems that bridge technology and human needs</span></p>
+                  <p className="flex items-start"><span className="text-stone-500 mr-3 mt-1">-</span><span>Media research into misinformation ecosystems and information architecture</span></p>
+                  <p className="flex items-start"><span className="text-stone-500 mr-3 mt-1">-</span><span>Production coordination on large-scale projects including Marvel and Disney</span></p>
+                </div>
               </div>
-              <div>
-                <p className="text-sm text-stone-500 dark:text-gray-400">Mixcloud</p>
-                <p className={connectLink}>DJ sets</p>
+            </div>
+          </section>
+
+          <section id="connect" className="py-24 px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="mb-8 text-stone-900 dark:text-white text-4xl font-semibold">Connect</h2>
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+                <a
+                  href="https://linkedin.com/in/nikhilkhedkar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={connectCard}
+                  aria-label="LinkedIn profile"
+                >
+                  <div className={`${connectIconBox} shrink-0`}>
+                    <Linkedin className="w-5 h-5 text-stone-700 dark:text-slate-200" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-stone-500 dark:text-gray-400">LinkedIn</p>
+                    <p className={connectLink}>Nikhil Khedkar</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://teambotics.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={connectCard}
+                  aria-label="Teambotics website"
+                >
+                  <div className={`${connectIconBox} shrink-0`}>
+                    <img
+                      src="/brands/teambotics-logo.png"
+                      alt="Teambotics logo"
+                      className="h-8 w-8 object-contain"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-sm text-stone-500 dark:text-gray-400">Founder</p>
+                    <p className={connectLink}>Teambotics Inc</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://soundcloud.com/sublumerecords"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={connectCard}
+                  aria-label="Sublume Records on SoundCloud"
+                >
+                  <div className={`${connectIconBox} shrink-0`}>
+                    <Disc3 className="w-5 h-5 text-stone-700 dark:text-slate-200" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-stone-500 dark:text-gray-400">Record Label</p>
+                    <p className={connectLink}>Sublume Records</p>
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.mixcloud.com/nickhil/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={connectCard}
+                  aria-label="DJ sets on Mixcloud"
+                >
+                  <div className={`${connectIconBox} shrink-0`}>
+                    <Headphones className="w-5 h-5 text-stone-700 dark:text-slate-200" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-stone-500 dark:text-gray-400">Mixcloud</p>
+                    <p className={connectLink}>DJ sets</p>
+                  </div>
+                </a>
               </div>
-            </a>
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+        </>
+      )}
 
       <footer className="py-12 px-6 lg:px-8 bg-[#f7f0e4] dark:bg-gray-800 border-t border-[var(--surface-border)] dark:border-gray-700 transition-colors duration-300">
         <div className="max-w-7xl mx-auto text-center text-stone-500 dark:text-gray-400 text-sm">
           <p>Copyright 2026 Nikhil Khedkar. All rights reserved.</p>
         </div>
       </footer>
+
       {showScrollTop ? (
         <button
           type="button"

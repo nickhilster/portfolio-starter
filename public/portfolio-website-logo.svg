@@ -1,0 +1,21 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title>Nikhil Khedkar logo</title>
+  <defs>
+    <linearGradient id="prideFill" x1="27" y1="6" x2="124" y2="144" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E40303"/>
+      <stop offset="0.18" stop-color="#FF8C00"/>
+      <stop offset="0.34" stop-color="#FFED00"/>
+      <stop offset="0.5" stop-color="#008026"/>
+      <stop offset="0.68" stop-color="#004DFF"/>
+      <stop offset="0.84" stop-color="#750787"/>
+      <stop offset="1" stop-color="#D60270"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="M27 6L27 144L68 120L68 63L87 94L124 75L124 62L95 36L95 71L63 35L27 6Z"
+    fill="url(#prideFill)"
+    stroke="#FFFFFF"
+    stroke-width="1"
+    stroke-linejoin="round"
+  />
+</svg>

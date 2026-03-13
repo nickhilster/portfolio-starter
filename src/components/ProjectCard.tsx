@@ -10,11 +10,22 @@ type ProjectCardProps = {
   link?: string
 }
 
-export default function ProjectCard({ title, description, tag, imageUrl, link }: ProjectCardProps) {
+export default function ProjectCard({
+  title,
+  description,
+  tag,
+  imageUrl,
+  link,
+}: ProjectCardProps) {
   const isInteractive = Boolean(link)
 
   const handleClick = () => {
     if (link) {
+      if (link.startsWith('/')) {
+        window.location.assign(link)
+        return
+      }
+
       window.open(link, '_blank', 'noopener,noreferrer')
     }
   }

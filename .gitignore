@@ -6,3 +6,4 @@ Thumbs.db
 
 .vercel
 themes/
+.vite-*.log
