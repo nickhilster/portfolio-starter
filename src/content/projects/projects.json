@@ -70,5 +70,13 @@
     "tag": "Showreel",
     "imageUrl": "/projects/motiongraphics-demoreel.svg",
     "link": "https://youtu.be/FPgL_biD40w?si=wrlRJTH9QWWvebhh"
+  },
+  {
+    "id": "p10",
+    "title": "Techedelic",
+    "description": "An archived story of Toronto's underground electronic scene, told through releases, mixes, artists, and events.",
+    "tag": "Independent Platform",
+    "imageUrl": "/projects/techedelic-cover-thumb.webp",
+    "link": "/techedelic"
   }
 ]

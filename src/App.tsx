@@ -5,6 +5,7 @@ import CursorRippleTrail from './components/CursorRippleTrail'
 import ExplorationCard from './components/ExplorationCard'
 import PrincipleCard from './components/PrincipleCard'
 import ProjectCard from './components/ProjectCard'
+import TechedelicPage from './components/TechedelicPage'
 import { explorations } from './content/explorations/explorations'
 import principles from './content/principles/principles.json'
 import projects from './content/projects/projects.json'
@@ -37,6 +38,8 @@ export default function App() {
 
   const currentPath = getCurrentPath()
   const isExplorationsPage = currentPath === '/explorations'
+  const isTechedelicPage = currentPath === '/techedelic'
+  const isSubpage = isExplorationsPage || isTechedelicPage
 
   useEffect(() => {
     const root = document.documentElement
@@ -52,8 +55,10 @@ export default function App() {
   useEffect(() => {
     document.title = isExplorationsPage
       ? 'Nikhil Khedkar | Visual Explorations'
-      : 'Nikhil Khedkar | AI Enablement & Systems Designer'
-  }, [isExplorationsPage])
+      : isTechedelicPage
+        ? 'Nikhil Khedkar | Techedelic'
+        : 'Nikhil Khedkar | AI Enablement & Systems Designer'
+  }, [isExplorationsPage, isTechedelicPage])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,8 +77,8 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const homeHref = isExplorationsPage ? '/' : '#top'
-  const homeSectionHref = (id: string) => (isExplorationsPage ? `/#${id}` : `#${id}`)
+  const homeHref = isSubpage ? '/' : '#top'
+  const homeSectionHref = (id: string) => (isSubpage ? `/#${id}` : `#${id}`)
 
   const navLink =
     'text-stone-700 dark:text-gray-300 hover:text-stone-950 dark:hover:text-slate-100 transition-colors'
@@ -211,6 +216,8 @@ export default function App() {
             </div>
           </section>
         </>
+      ) : isTechedelicPage ? (
+        <TechedelicPage />
       ) : (
         <>
           <section className="pt-32 pb-24 px-6 lg:px-8">

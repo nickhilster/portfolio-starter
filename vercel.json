@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/techedelic",
+      "destination": "/"
+    },
+    {
+      "source": "/techedelic/(.*)",
+      "destination": "/"
+    },
+    {
       "source": "/explorations",
       "destination": "/"
     },
