@@ -1,10 +1,51 @@
 import React from 'react'
+import { Disc3, Headphones } from 'lucide-react'
 import { techedelicStory } from '../content/case-studies/techedelic'
 
 export default function TechedelicPage() {
   return (
     <>
-      <section className="pt-32 pb-14 px-6 lg:px-8">
+      <section className="pt-32 pb-6 px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <p className="mb-4 text-sm uppercase tracking-[0.16em] text-stone-500 dark:text-gray-400">
+            Hear the Source
+          </p>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <a
+              href="https://soundcloud.com/sublumerecords"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="interactive-card group flex items-center gap-4 rounded-2xl border-2 border-[var(--surface-border)] bg-[var(--surface-bg)] p-5 transition-all duration-300 hover:border-[var(--surface-border-hover)] hover:scale-[1.02] dark:border-gray-600 dark:bg-gray-700 dark:hover:border-slate-300"
+              aria-label="Sublume Records on SoundCloud"
+            >
+              <div className="w-12 h-12 rounded-lg border-2 border-[var(--surface-border)] dark:border-slate-700 bg-[#efe5d6] dark:bg-slate-800/70 flex items-center justify-center shrink-0">
+                <Disc3 className="w-5 h-5 text-stone-700 dark:text-slate-200" />
+              </div>
+              <div>
+                <p className="text-sm text-stone-500 dark:text-gray-400">Record Label</p>
+                <p className="font-medium text-stone-900 dark:text-gray-100">Sublume Records</p>
+              </div>
+            </a>
+            <a
+              href="https://www.mixcloud.com/nickhil/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="interactive-card group flex items-center gap-4 rounded-2xl border-2 border-[var(--surface-border)] bg-[var(--surface-bg)] p-5 transition-all duration-300 hover:border-[var(--surface-border-hover)] hover:scale-[1.02] dark:border-gray-600 dark:bg-gray-700 dark:hover:border-slate-300"
+              aria-label="DJ sets on Mixcloud"
+            >
+              <div className="w-12 h-12 rounded-lg border-2 border-[var(--surface-border)] dark:border-slate-700 bg-[#efe5d6] dark:bg-slate-800/70 flex items-center justify-center shrink-0">
+                <Headphones className="w-5 h-5 text-stone-700 dark:text-slate-200" />
+              </div>
+              <div>
+                <p className="text-sm text-stone-500 dark:text-gray-400">Mixcloud</p>
+                <p className="font-medium text-stone-900 dark:text-gray-100">DJ Sets</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-14 px-6 lg:px-8">
         <div className="max-w-6xl mx-auto grid grid-cols-1 gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div>
             <p className="mb-3 text-sm uppercase tracking-[0.16em] text-stone-500 dark:text-gray-400">
@@ -31,7 +72,7 @@ export default function TechedelicPage() {
       </section>
 
       <section className="pb-10 px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
           {techedelicStory.quickFacts.map((fact) => (
             <div
               key={fact.label}
@@ -50,7 +91,7 @@ export default function TechedelicPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="interactive-card rounded-[2rem] border-2 border-[var(--surface-border)] bg-[var(--surface-bg)] p-8 md:p-10 dark:border-gray-600 dark:bg-gray-700">
             <p className="mb-3 text-sm uppercase tracking-[0.16em] text-stone-500 dark:text-gray-400">
-              The City
+              The Context
             </p>
             <p className="text-lg text-stone-800 dark:text-gray-300 leading-relaxed">
               {techedelicStory.overview}
@@ -77,7 +118,7 @@ export default function TechedelicPage() {
         <div className="max-w-6xl mx-auto">
           <div className="interactive-card rounded-[2rem] border-2 border-[var(--surface-border)] bg-[var(--surface-bg)] p-8 md:p-10 dark:border-gray-600 dark:bg-gray-700">
             <p className="mb-3 text-sm uppercase tracking-[0.16em] text-stone-500 dark:text-gray-400">
-              From the Scene Archive
+              Platform Archive
             </p>
             <p className="mb-4 text-3xl font-medium leading-tight text-stone-900 dark:text-white">
               {techedelicStory.archiveLine}
@@ -103,10 +144,10 @@ export default function TechedelicPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="mb-3 text-sm uppercase tracking-[0.16em] text-stone-500 dark:text-gray-400">
-              The Scene
+              The Problem
             </p>
             <h2 className="text-stone-900 dark:text-white text-4xl font-semibold">
-              How a city, a sound, and a platform came together.
+              How architecture turned a living culture into a navigable platform.
             </h2>
           </div>
 
@@ -144,7 +185,7 @@ export default function TechedelicPage() {
               What It Required
             </p>
             <h2 className="mb-4 text-stone-900 dark:text-white text-4xl font-semibold">
-              The instincts needed to hold a moving culture.
+              The systems thinking needed to hold a living culture.
             </h2>
             <p className="text-lg text-stone-700 dark:text-gray-300 leading-relaxed">
               {techedelicStory.skillsIntro}

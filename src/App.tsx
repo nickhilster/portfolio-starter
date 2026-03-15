@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Analytics } from '@vercel/analytics/react'
-import { ArrowUp, Disc3, Headphones, Linkedin, Menu, Moon, Sun, X } from 'lucide-react'
+import { ArrowUp, Linkedin, Menu, Moon, Sun, X } from 'lucide-react'
 import CursorRippleTrail from './components/CursorRippleTrail'
 import ExplorationCard from './components/ExplorationCard'
 import PrincipleCard from './components/PrincipleCard'
@@ -294,7 +294,7 @@ export default function App() {
           <section id="connect" className="py-24 px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <h2 className="mb-8 text-stone-900 dark:text-white text-4xl font-semibold">Connect</h2>
-              <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+              <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
                 <a
                   href="https://linkedin.com/in/nikhilkhedkar"
                   target="_blank"
@@ -328,38 +328,6 @@ export default function App() {
                   <div>
                     <p className="text-sm text-stone-500 dark:text-gray-400">Founder</p>
                     <p className={connectLink}>Teambotics Inc</p>
-                  </div>
-                </a>
-
-                <a
-                  href="https://soundcloud.com/sublumerecords"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={connectCard}
-                  aria-label="Sublume Records on SoundCloud"
-                >
-                  <div className={`${connectIconBox} shrink-0`}>
-                    <Disc3 className="w-5 h-5 text-stone-700 dark:text-slate-200" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-stone-500 dark:text-gray-400">Record Label</p>
-                    <p className={connectLink}>Sublume Records</p>
-                  </div>
-                </a>
-
-                <a
-                  href="https://www.mixcloud.com/nickhil/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={connectCard}
-                  aria-label="DJ sets on Mixcloud"
-                >
-                  <div className={`${connectIconBox} shrink-0`}>
-                    <Headphones className="w-5 h-5 text-stone-700 dark:text-slate-200" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-stone-500 dark:text-gray-400">Mixcloud</p>
-                    <p className={connectLink}>DJ sets</p>
                   </div>
                 </a>
               </div>

@@ -1,41 +1,41 @@
 export const techedelicStory = {
-  eyebrow: 'Archived Scene Story',
-  title: "Techedelic tells a story about Toronto's underground electronic music scene.",
+  eyebrow: 'Platform Design & Cultural Archive',
+  title: "Techedelic was a modular platform that gave Toronto's underground electronic music scene structure, clarity, and a durable online surface.",
   summary:
-    "From 2016 to 2024, Techedelic followed a corner of Toronto shaped by warehouse energy, techno drive, psychedelic drift, and word-of-mouth discovery. The project gave that scene an online surface through releases, mixes, artists, events, and updates, leaving behind an archive that still carries its atmosphere.",
+    "From 2016 to 2024, Techedelic operated as a designed content platform for a living subculture — organizing releases, mixes, artists, events, and editorial into a navigable system that preserved the character of an underground scene without flattening it. The platform ran for eight years and still exists as a structured archive.",
   coverImageUrl: '/projects/techedelic-cover.webp',
   quickFacts: [
     {
-      label: 'Years Active',
+      label: 'Platform Active',
       value: '2016 to 2024',
     },
     {
-      label: 'Archived Footprint',
-      value: '22 Wayback captures',
+      label: 'Content Modules',
+      value: 'Releases, Mixes, Artists, Events, News',
     },
     {
       label: 'Scene Context',
-      value: 'Toronto underground electronic scene',
+      value: 'Toronto underground electronic music',
     },
     {
       label: 'Current Status',
-      value: 'Closed, archive remains',
+      value: 'Archived, structure intact',
     },
   ],
   overview:
-    "Toronto is the real protagonist here. Its underground electronic scene moved through basements, warehouses, club nights, niche artists, and trusted recommendations passed from one person to another. Techedelic emerged as a response to that world, giving it a place online where its moods, textures, and recurring signals could be gathered without flattening what made it strange.",
-  responsibilityTitle: 'How He Framed The Scene',
+    "Toronto's underground electronic scene was a living, complex system — artists, labels, venues, and communities moving through overlapping signals and trust networks. The design challenge was not to simplify that complexity away, but to give it a navigable structure: one that let people move through releases, mixes, artists, and events without losing the texture of what made the scene worth documenting in the first place.",
+  responsibilityTitle: 'How The Platform Was Designed',
   responsibilityAreas: [
-    'A name and concept that fused techno pulse with psychedelic atmosphere',
-    'A visual language shaped by flyers, dark clubs, and underground design cues',
-    'A structured home for releases, mixes, artists, events, and scene updates',
-    'Editorial language that invited people into a world rather than selling them a product',
-    'Years of curation, upkeep, and pattern recognition across a living subculture',
-    'An archive that still preserves the shape and energy of that moment',
+    'A naming and identity system that fused techno pulse with psychedelic atmosphere — credible to insiders, legible to newcomers',
+    'A modular content architecture organizing releases, mixes, artists, events, and editorial into distinct but connected systems',
+    'A visual language derived from flyers, dark clubs, and underground design history — consistent across eight years of updates',
+    "An editorial framework that gave each content type its own voice and logic without fragmenting the platform's identity",
+    'Eight years of content governance: categorizing, updating, archiving, and maintaining quality as the culture shifted',
+    "An archive that still preserves the platform's structural and atmospheric integrity",
   ],
-  archiveLine: 'Dive into the Rabbit Hole.',
+  archiveLine: 'A platform in motion.',
   archiveSummary:
-    "The surviving snapshots show a scene portal in motion. By 2017, Techedelic already had enough structure to feel like a map of a living culture, with recurring sections, visual consistency, and multiple ways into the city's sound and nightlife.",
+    "By 2017, Techedelic's structure was mature enough to function as a true scene map — recurring sections, visual consistency, and multiple pathways into the city's sound. The Wayback captures show a content system that held its shape across years of cultural change.",
   archiveSections: [
     'Releases',
     'Mixes',
@@ -45,76 +45,76 @@ export const techedelicStory = {
   ],
   storyBlocks: [
     {
-      title: 'A City After Dark',
+      title: 'The Design Problem',
       body:
-        "Toronto's underground electronic scene was never just one venue or one sound. It moved through late-night rooms, warehouse parties, small communities, obsessive track digging, and the quiet trust of people sharing what mattered. Techedelic took shape inside that ecosystem, treating the scene itself as something worth documenting rather than merely advertising to.",
+        'Underground music scenes are structurally complex: distributed across artists, venues, labels, and informal networks, with no central authority and no clean taxonomy. The design challenge was to build a platform architecture that could contain that complexity — organizing it into something navigable without erasing what made it feel alive. Every structural decision was also a curatorial one.',
     },
     {
-      title: 'A Platform For Signals',
+      title: 'Modular Content Architecture',
       body:
-        'The platform turned scattered signals into something navigable. Releases, mixes, artists, events, and news became a way of tracing how the scene actually moved: across moods, recommendations, and recurring names. Instead of flattening everything into generic EDM promotion, Techedelic preserved the feeling that discovery still required attention.',
+        "Releases, mixes, artists, events, and editorial updates became the platform's core modules — each with its own logic, but linked by a shared visual and editorial identity. This modularity allowed the platform to scale across eight years of changing content while staying coherent. The structure made discovery feel intentional rather than accidental.",
     },
     {
-      title: 'What The Archive Preserves',
+      title: 'Governance Over Time',
       body:
-        "Now that the site is dormant, the archive reads like a time capsule from a specific cultural pocket in Toronto. It captures not only a platform, but a way a scene once looked and felt online. For the portfolio, it also reveals an early version of the same instinct that continues through his work today: finding patterns in something alive, then building a structure that helps other people enter it.",
+        'A platform designed well at launch still has to be maintained, evolved, and governed as its context changes. Over eight years, the work shifted from initial architecture to ongoing stewardship: updating content, preserving quality, and keeping the structure legible as the scene itself moved. The archive that remains reflects that long-form discipline as much as any single design decision.',
     },
   ],
-  deliverablesTitle: 'How The Scene Showed Up',
+  deliverablesTitle: 'Platform Design Outputs',
   deliverables: [
-    'Curated release pages',
-    'Artist profiles and genre pathways',
-    'Mix and podcast features',
-    'Event listings with scene context',
-    'Landing-page copy and taglines',
-    'Ongoing updates and site maintenance',
+    'Identity system and naming architecture',
+    'Modular content structure',
+    'Visual design system',
+    'Editorial framework and voice guidelines',
+    'Artist and release taxonomies',
+    'Eight years of platform governance',
   ],
   skillCards: [
     {
-      title: 'Curation',
+      title: 'Platform Architecture',
       description:
-        'The work required more than taste. He had to decide which releases, artists, and mixes actually expressed the character of the scene.',
+        'Designed a modular content system from scratch — defining the structure, logic, and relationships between content types that held over eight years of operation.',
     },
     {
-      title: 'Brand Identity',
+      title: 'Design Systems',
       description:
-        'The project needed a name, tone, and visual language that could carry underground credibility without feeling forced or overdesigned.',
+        'Built a visual and editorial system capable of scaling across years of content without losing coherence or the atmospheric quality that made the platform credible.',
     },
     {
-      title: 'Information Design',
+      title: 'Information Architecture',
       description:
-        'He organized a niche cultural archive so people could move through releases, artists, events, and ideas without losing the thread.',
+        'Organized a complex, living cultural archive so people could navigate releases, artists, events, and editorial without losing the thread of what connected them.',
     },
     {
-      title: 'Web Design',
+      title: 'Content Governance',
       description:
-        'Techedelic lived online, which meant designing the digital surface where the scene could feel coherent and alive.',
+        'Maintained and evolved the platform over eight years — categorizing, updating, and preserving quality as the scene and its content continued to shift.',
     },
     {
-      title: 'Editorial Voice',
+      title: 'Identity Design',
       description:
-        'Its language had to feel atmospheric, specific, and credible to people who already recognized the culture being described.',
+        'Created a name, visual language, and tone that carried underground credibility while remaining legible to people new to the scene.',
     },
     {
-      title: 'Scene Awareness',
+      title: 'Editorial Framework',
       description:
-        'The platform only worked because it stayed close to local context, underground signals, repetition, and trust.',
+        "Each content module had its own language logic — release copy, artist profiles, mix framing, and event context were all distinct but voiced from the same platform identity.",
     },
     {
-      title: 'Content Operations',
+      title: 'Cultural Research',
       description:
-        'Independent cultural platforms survive on upkeep, so the work included categorizing, updating, and carrying the archive forward over time.',
+        'The platform only worked because it stayed close to the living scene: tracking releases, artists, venues, and recurring signals across a decade of underground Toronto.',
     },
     {
-      title: 'Event Framing',
+      title: 'Complexity \u2192 Clarity',
       description:
-        'Artists and parties were framed as part of a living ecosystem, not isolated promotional posts.',
+        'Turned a sprawling, distributed subculture into a navigable platform — preserving its texture while giving it enough structure to be genuinely useful.',
     },
   ],
   skillsIntro:
-    'To hold a scene like this with any honesty, taste was only the beginning. The project demanded curation, writing, visual direction, web structure, and the patience to keep showing up while the culture itself kept shifting.',
+    'Designing for a living subculture required more than aesthetic judgment. It demanded systems thinking: defining content types, governing their relationships, maintaining quality over time, and knowing when to let the complexity breathe rather than force it into a template.',
   reflection:
-    "Techedelic belongs in this portfolio because it shows how he responded to a living subculture: not by abstracting it into strategy language, but by building a vessel for it. The scene is the hero of the story, but the project reveals the same instinct that carries through his later work: paying close attention to complexity, then shaping a structure that lets other people feel their way through it.",
+    "Techedelic belongs in this portfolio because it's an eight-year record of exactly the kind of design practice that scales: patient, structural, and grounded in genuine understanding of the domain. The platform wasn't designed for a single release cycle — it was built to hold a culture over time, which required the same instincts that make product platforms work in larger, more complex organizations.",
   closingLine:
-    "In that sense, Techedelic was less a story about one website than about a city, a sound, and the urge to give both a durable form.",
+    'The skills that held Techedelic together — platform architecture, modular systems, content governance, editorial clarity — are the same ones that make design practice legible and durable at scale.',
 } as const
